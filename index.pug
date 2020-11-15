@@ -75,7 +75,8 @@ html(lang="en")
                 -var i = 0;
                 .main-nav_item
                     -for(name in menuItem) {
-                        a(href= menuItemHref[i])= menuItem[i]
+                        a(href= menuItemHref[i])
+                            span= menuItem[i]
                         -i++
                     -}
             
