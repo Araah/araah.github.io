@@ -160,6 +160,7 @@ header nav.main-nav .main-nav_item {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 14vw;
 }
 header nav.main-nav .main-nav_item a {
   color: #ffffff;
@@ -187,7 +188,6 @@ section.section01 {
   color: #ffffff;
 }
 section.section01 .section01-main_content {
-  height: 1681px;
   background: linear-gradient(180deg, rgba(50, 42, 39, 0.35) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
@@ -214,14 +214,18 @@ section.section01 .section01-main_content .header-content p {
 section.section01 .section01-main_content .section03 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-body_star {
+  margin: 4vh 0;
   margin-left: 50%;
-  transform: translateX(-45%);
+  transform: translateX(-50%);
+  border-top: 2px #ffffff solid;
+  border-bottom: 2px solid #ffffff;
+  padding: 1vh 0;
 }
 section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-body_star img {
-  margin-right: 1vw;
+  margin: 0 0.45vw;
 }
 section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-title_img {
   margin-left: 50%;
