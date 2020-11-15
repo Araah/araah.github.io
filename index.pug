@@ -14,6 +14,7 @@
 -var socialLinlHref = ['https://www.freelancer.com/u/Araah', '#!', '#!', '#!', 'https://github.com/Araah'] // Social link
 -var cont02TextTitle = ['Title exaple 1', 'Title examplem 2'];
 -var cont02Text =['Text example 1', 'Text example 2'];
+-var curentPage = 'Home';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -75,9 +76,15 @@ html(lang="en")
                 -var i = 0;
                 .main-nav_item
                     -for(name in menuItem) {
-                        a(href= menuItemHref[i])
-                            span= menuItem[i]
-                        -i++
+                        if (curentPage == menuItem[i])
+                            a(href= menuItemHref[i] id= "curent_page")
+                                span= menuItem[i]
+                            -i++
+                        else
+                            a(href= menuItemHref[i])
+                                span= menuItem[i]
+                            -i++
+                        
                     -}
             
         section.section01
