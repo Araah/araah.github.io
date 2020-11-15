@@ -1,6 +1,157 @@
-doctype html
-html
+-var sizes = ['16x16', '32x32', '96x96', '120x120', '192x192', '57x57', '60x60', '72x72', '76x76', '114x114', '120x120', '144x144', '152x152', '180x180'];
+-var sizesBg = ['2560', '1920', '1600', '1440', '1280']
+-var cssPath = "./css/";
+-var jsPath = "./js/";
+-var favPath = "./favicon/";
+-var imgPath = "./images/";
+-var navBarColor = "#ffffff";
+-var logoImg = "ruvilogo.svg"; //- Logo Image
+-var logoText = "RuVi Logo" //-Logo Text
+-var titles = "RuVi Profile"; //Cambiar Para Head Title
+-var menuItem = ['Home', 'Price', 'Arts', 'Web', 'About']; // Menu name
+-var menuItemHref = ['index.html', '#!', '#!', '#!', '#!'] // Menu Link
+-var socialLink = ['Freelancer', 'Pinterest', 'Youtube', 'Twitter', 'GitHub'] // Social name
+-var socialLinlHref = ['https://www.freelancer.com/u/Araah', '#!', '#!', '#!', 'https://github.com/Araah'] // Social link
+-var cont02TextTitle = ['Title exaple 1', 'Title examplem 2'];
+-var cont02Text =['Text example 1', 'Text example 2'];
+
+<!DOCTYPE html>
+html(lang="en")
     head
-        title Araah Profile 
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(
+            type= "image/x-icon"
+            rel= "shortcut icon"
+            href= favPath +"favicon.ico")
+
+        -for (var i = 0; i <= 3; i++) {
+            link(
+                type= "image/png"
+                sizes= sizes[i]
+                rel= "icon"
+                href= favPath + "favicon-" + sizes[i] + ".png")
+        -}
+        link(
+                type="image/png"
+                sizes=sizes[4]
+                rel="icon"
+                href= favPath + "android-icon-" + sizes[4] + ".png")
+        -for (var i=5; i<=13; i++) {
+            link(
+                sizes= sizes[i]
+                rel="apple-touch-icon"
+                href= favPath + "apple-touch-icon   -" + sizes[i] + ".ico")
+        -}
+        link(
+            rel="manifest"
+            href=favPath + "manifest.json"
+        )
+        link(rel="stylesheet", href= cssPath + "main.min.css")
+        script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+        script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+        script(src=jsPath + "main.js")
+        meta(
+            name= "theme-color"
+            content= navBarColor
+        )
+
+        title= titles
     body
-        h1 The site is under construction.
+        header
+            picture.bg-image
+                -var i = 0;
+                -for (name in sizesBg) {
+                source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
+                source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
+                -i++
+                -}
+                source(srcset= imgPath + "main_bg-1920-min.webp")
+                source(srcset= imgPath + "main_bg-1920-min.jpg")
+                img(src= imgPath + "main_bg-1920-min.jpg")
+            nav.main-nav
+                .main-nav_logo
+                    img(src= imgPath + logoImg, alt= logoText)
+                -var i = 0;
+                .main-nav_item
+                    -for(name in menuItem) {
+                        a(href= menuItemHref[i])= menuItem[i]
+                        -i++
+                    -}
+            
+        section.section01
+            .section01-main_content
+                .header-content
+                    h1= "Ru Vi"
+                    h3= "Design studio"
+                    p= "Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus."
+                .header-line
+                nav.social-nav
+                    -var i = 0;
+                    -for (name in socialLink) {
+                        a(href= socialLinlHref[i] target="_blank")
+                            img(src= imgPath + socialLink[i] + ".png", alt= "RuVi " + socialLink[i])
+                        -i++
+                    -}
+                .header-line
+                //- .section01-content
+                    .section01-content_image
+                    .section01-content_image
+                    .section01-content_image
+                //- section.section02
+                //-     h2
+                //-     .section02-content
+                //-         -var i = 0;
+                //-         -for (name in cont02TextTitle) {
+                //-             .section-02-content_image
+                //-                 img(src= imgPath + "cont02-" + (i+1) + ".jpg", alt="")
+                //-             .section-02-content_text
+                //-                 h4= cont02TextTitle[i]
+                //-                 p= cont02Text[i]
+                //-                 -i++
+                //-         -}
+                section.section03
+                    .section03-comment
+                        .section03-comment_title
+                            .comment-body_star
+                                -for(var i = 1; i <= 5; i++) {
+                                    img(src= imgPath + "star.svg", alt="rate")
+                                -}
+                            .comment-title_img
+                                a(href="https://www.freelancer.com/u/ascensioninc" target="_blank")
+                                    img(src= imgPath + "jonatan.jpg", alt="Jonathan F.")
+                            .comment-title_name Jonathan F.
+                        .section03-comment_body
+                            .comment-body_text
+                                p= "When talent meets dedication ! Ruslan is strong both on design and on technique, knows what he wants and how to do it. Self driven, energetic. He proposed different designs et let us choose, and was patient enough with us to help us overcome technical and compatibility issues, to adapt our website structure to the needed design constraints. Recommended !"
+                    .section03-comment
+                        .section03-comment_title
+                            .comment-body_star
+                                -for(var i = 1; i <= 5; i++) {
+                                    img(src= imgPath + "star.svg", alt="rate")
+                                -}
+                            .comment-title_img
+                                a(href="https://www.freelancer.com/u/Traceypiano" target="_blank")
+                                    img(src= imgPath + "traice.png", alt="Tracey P.")
+                            .comment-title_name Tracey P.
+                        .section03-comment_body
+                            .comment-body_text
+                                p= "After the first draft in the contest, I mentioned a few things that needed to be changed, but he read my mind as to some details I hadn't mentioned. Great work, consistent, great attitude, professional product, on time. I will hire him again."
+                    .section03-comment
+                        .section03-comment_title
+                            .comment-body_star
+                                -for(var i = 1; i <= 5; i++) {
+                                    img(src= imgPath + "star.svg", alt="rate")
+                                -}
+                            .comment-title_img
+                                a(href="https://www.freelancer.com/u/karen158" target="_blank")
+                                    img(src= imgPath + "karina.svg", alt="Karina M.")
+                            .comment-title_name Karina M.
+                        .section03-comment_body
+                            .comment-body_text
+                                p= "OMG, He is a great professional, talented, provided me project ahead of time and exactly what I was looking for, I am shocked by my experience with him, I worked a lot here with freelancers who did not give and dis not understand a quarter of the project, and he is excellent !!! Anyone who wants a bomb project is just him !! VERY RECOMMENDED!!!"
+
+
+        section.section04
+        footer
+        
