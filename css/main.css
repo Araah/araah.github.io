@@ -1,128 +1,4 @@
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-}
-
-footer, header, nav, section, main {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-a {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.main-nav {
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.main-nav_item a {
-  padding: 10px;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  transition: ease-out 0.3s 0.3s;
-}
-
-.main-nav_item a span::before {
-  width: 100%;
-  height: 2px;
-  background: white;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateX(-100%);
-  transition: 0.3s;
-}
-
-.main-nav_item a span::after {
-  width: 100%;
-  height: 2px;
-  background: white;
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translateX(100%);
-  transition: 0.3s;
-}
-
-.main-nav_item a::before {
-  width: 2px;
-  height: 100%;
-  background: white;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(100%);
-  transition: 0.3s;
-}
-
-.main-nav_item a::after {
-  width: 2px;
-  height: 100%;
-  background: white;
-  content: "";
-  position: absolute;
-  right: 0px;
-  bottom: 0;
-  transform: translateY(-100%);
-  transition: 0.3s;
-}
-
-.main-nav_item a:hover {
-  color: white;
-}
-
-.main-nav_item a:hover::before,
-.main-nav_item a:hover::after {
-  transform: translateX(0);
-}
-
-.main-nav_item a:hover span::before,
-.main-nav_item a:hover span::after {
-  transform: translateX(0);
-}
-
-body {
+@use 'rest' {}@use 'effect' {}body {
   position: relative;
   width: 100%;
   background-image: url("../images/bg_sand.jpg");
@@ -137,6 +13,7 @@ header {
   width: 100%;
   height: 100vh;
 }
+
 header nav.main-nav {
   width: 100%;
   height: 11.29vh;
@@ -147,21 +24,25 @@ header nav.main-nav {
   grid-template-columns: 1fr 6fr;
   z-index: 1000;
 }
+
 header nav.main-nav .main-nav_logo {
   height: 100%;
   margin: auto;
   margin-top: 1vh;
 }
+
 header nav.main-nav .main-nav_logo img {
   width: 8.21vw;
   height: auto;
 }
+
 header nav.main-nav .main-nav_item {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-right: 14vw;
 }
+
 header nav.main-nav .main-nav_item a {
   color: #ffffff;
   text-transform: uppercase;
@@ -169,10 +50,12 @@ header nav.main-nav .main-nav_item a {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
 header nav.main-nav .main-nav_item a#curent_page {
   border: 2px #ffffff double;
 }
-header picture.bg-image img {
+
+picture.bg-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -190,23 +73,109 @@ section.section01 {
   top: 30vh;
   color: #ffffff;
 }
+
 section.section01 .section01-main_content {
   background: linear-gradient(180deg, rgba(50, 42, 39, 0.35) 0%, rgba(45, 40, 40, 0.85) 33.85%, #2D2828 49.48%, #2D2828 68.75%, #2D2828 82.29%, #2D2828 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   box-shadow: -15px 0px 15px rgba(0, 0, 0, 0.3);
 }
+
 section.section01 .section01-main_content .header-content {
   padding-top: 5vh;
   padding-right: 20%;
   text-align: center;
 }
+
 section.section01 .section01-main_content .header-content h1 {
   font-size: 4rem;
   margin-bottom: 2vh;
   text-transform: uppercase;
 }
+
 section.section01 .section01-main_content .header-content h3 {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+}
+
+section.section01 .section01-main_content .header-content p {
+  font-size: 1.5rem;
+  padding: 1vh 10vw;
+}
+
+section.section01 .section01-main_content .section03 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5vh;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-body_star {
+  margin: 4vh 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px #ffffff solid;
+  border-bottom: 2px solid #ffffff;
+  padding: 1vh 0;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-body_star img {
+  margin: 0 0.45vw;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-title_img {
+  margin-left: 50%;
+  transform: translateX(-60%);
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-title_img img {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_title .comment-title_name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2vh;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_body {
+  text-align: justify;
+}
+
+section.section01 .section01-main_content .section03 .section03-comment .section03-comment_body .comment-body_text {
+  padding: 3vh 3vw;
+}
+
+section.section01 .section01-main_content nav.social-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 5vw;
+}
+
+section.section01 .section01-main_content nav.social-nav a {
+  margin: 1vh 1vw;
+}
+
+section.section01 .section01-main_content nav.social-nav a img {
+  width: 150px;
+  height: auto;
+}
+
+section.section01 .section01-main_content .header-line {
+  margin: 5vh 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
+.section01 .section01-main_content .header-content h3 {
   font-size: 2rem;
   margin-bottom: 2vh;
 }

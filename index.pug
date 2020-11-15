@@ -4,6 +4,7 @@
 -var jsPath = "./js/";
 -var favPath = "./favicon/";
 -var imgPath = "./images/";
+-var incPath = "./include/";
 -var navBarColor = "#ffffff";
 -var logoImg = "ruvilogo.svg"; //- Logo Image
 -var logoText = "RuVi Logo" //-Logo Text
@@ -16,77 +17,25 @@
 -var cont02Text =['Text example 1', 'Text example 2'];
 -var curentPage = 'Home';
 
+
 <!DOCTYPE html>
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(
-            type= "image/x-icon"
-            rel= "shortcut icon"
-            href= favPath +"favicon.ico")
-
-        -for (var i = 0; i <= 3; i++) {
-            link(
-                type= "image/png"
-                sizes= sizes[i]
-                rel= "icon"
-                href= favPath + "favicon-" + sizes[i] + ".png")
-        -}
-        link(
-                type="image/png"
-                sizes=sizes[4]
-                rel="icon"
-                href= favPath + "android-icon-" + sizes[4] + ".png")
-        -for (var i=5; i<=13; i++) {
-            link(
-                sizes= sizes[i]
-                rel="apple-touch-icon"
-                href= favPath + "apple-touch-icon   -" + sizes[i] + ".ico")
-        -}
-        link(
-            rel="manifest"
-            href=favPath + "manifest.json"
-        )
-        link(rel="stylesheet", href= cssPath + "main.min.css")
-        //- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-        //- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
-        //- script(src=jsPath + "main.js")
-        meta(
-            name= "theme-color"
-            content= navBarColor
-        )
-
-        title= titles
+        include include/head.pug
     body
-        header
-            picture.bg-image
-                -var i = 0;
-                -for (name in sizesBg) {
-                source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
-                source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
-                -i++
-                -}
-                source(srcset= imgPath + "main_bg-1920-min.webp")
-                source(srcset= imgPath + "main_bg-1920-min.jpg")
-                img(src= imgPath + "main_bg-1920-min.jpg")
-            nav.main-nav
-                .main-nav_logo
-                    img(src= imgPath + logoImg, alt= logoText)
-                -var i = 0;
-                .main-nav_item
-                    -for(name in menuItem) {
-                        if (curentPage == menuItem[i])
-                            a(href= menuItemHref[i] id= "curent_page")
-                                span= menuItem[i]
-                            -i++
-                        else
-                            a(href= menuItemHref[i])
-                                span= menuItem[i]
-                            -i++
-                        
-                    -}
-            
+        include include/header-nav.pug
+
+        picture.bg-image
+            -var i = 0;
+            -for (name in sizesBg) {
+            source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
+            source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
+            -i++
+            -}
+            source(srcset= imgPath + "main_bg-1920-min.webp")
+            source(srcset= imgPath + "main_bg-1920-min.jpg")
+            img(src= imgPath + "main_bg-1920-min.jpg")  
+        
         section.section01
             .section01-main_content
                 .header-content
@@ -161,7 +110,5 @@ html(lang="en")
                             .comment-body_text
                                 p= "OMG, He is a great professional, talented, provided me project ahead of time and exactly what I was looking for, I am shocked by my experience with him, I worked a lot here with freelancers who did not give and dis not understand a quarter of the project, and he is excellent !!! Anyone who wants a bomb project is just him !! VERY RECOMMENDED!!!"
 
-
-        section.section04
-        footer
+        include include/footer.pug
         

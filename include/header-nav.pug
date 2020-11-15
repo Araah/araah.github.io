@@ -1,0 +1,17 @@
+header
+    nav.main-nav
+        .main-nav_logo
+            img(src= imgPath + logoImg, alt= logoText)
+        -var i = 0;
+        .main-nav_item
+            -for(name in menuItem) {
+                if (curentPage == menuItem[i])
+                    a(href= menuItemHref[i] id= "curent_page")
+                        span= menuItem[i]
+                    -i++
+                else
+                    a(href= menuItemHref[i])
+                        span= menuItem[i]
+                    -i++
+                
+            -}
