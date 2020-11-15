@@ -1,0 +1,32 @@
+/* macondo-regular - latin */
+
+@font-face {
+    font-family: 'Macondo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/macondo-v9-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Macondo'), local('Macondo-Regular'), url('../fonts/macondo-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/macondo-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/macondo-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/macondo-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/macondo-v9-latin-regular.svg#Macondo') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* alata-regular - latin */
+
+@font-face {
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/alata-v2-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Alata Regular'), local('Alata-Regular'), url('../fonts/alata-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/alata-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/alata-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/alata-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/alata-v2-latin-regular.svg#Alata') format('svg');
+    /* Legacy iOS */
+}
