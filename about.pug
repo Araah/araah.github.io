@@ -1,15 +1,67 @@
+-var sizes = ['16x16', '32x32', '96x96', '120x120', '192x192', '57x57', '60x60', '72x72', '76x76', '114x114', '120x120', '144x144', '152x152', '180x180'];
+-var sizesBg = ['2560', '1920', '1600', '1440', '1280']
+-var cssPath = "./css/";
+-var jsPath = "./js/";
+-var favPath = "./favicon/";
+-var imgPath = "./images/";
+-var incPath = "./include/";
+-var navBarColor = "#ffffff";
+-var logoImg = "ruvilogo.svg"; //- Logo Image
+-var logoText = "RuVi Logo" //-Logo Text
+-var titles = "RuVi Profile About"; //Cambiar Para Head Title
+-var menuItem = ['Home', 'Price', 'Arts', 'Web', 'About']; // Menu name
+-var menuItemHref = ['index.html', '#!', '#!', '#!', 'about.html'] // Menu Link
+-var socialLink = ['Freelancer', 'Pinterest', 'Youtube', 'Twitter', 'GitHub'] // Social name
+-var socialLinlHref = ['https://www.freelancer.com/u/Araah', '#!', '#!', '#!', 'https://github.com/Araah'] // Social link
+-var cont02TextTitle = ['Title exaple 1', 'Title examplem 2'];
+-var cont02Text =['Text example 1', 'Text example 2'];
+-var curentPage = 'About';
+
+
 <!DOCTYPE html>
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        script(type="text/javascript" src="./js/jquery-3.5.1.min.js")
-        title= "TEst"
-        link(rel="stylesheet", href="../css/styletest.css")
+        include include/head.pug
     body
-        div.bloc1(id= "rec106962189") TEst1
-        .bloc1(id="rec106962736") TEst2
-        .bloc1(id="ec106964636") Test3
-        .bloc1(id="rec106962218") Test 4
+        main
+            div(class="cd-index cd-main-content")
+                div
+                    include include/header-nav.pug
 
-        script(src="/js/js_scroll.js")
+                    picture.bg-image
+                        -var i = 0;
+                        -for (name in sizesBg) {
+                        source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
+                        source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
+                        -i++
+                        -}
+                        source(srcset= imgPath + "main_bg-1920-min.webp")
+                        source(srcset= imgPath + "main_bg-1920-min.jpg")
+                        img(src= imgPath + "main_bg-1920-min.jpg")  
+                    section.section01
+                        .section01-main_content
+                            .header-content
+                                .ruslan_profile
+                                    .ruprof-img
+                                        img(src= imgPath + "ruslan.jpg", alt="Ruslan M.")
+                                    .ruprof-text
+                                        p= "Hello. My name is Ruslan. I have a bachelor's degree in programming. I am an experienced Front-end developer with professional knowledge of HTML/Pug, CSS/Sass, JavaScript, PHP and more. I have a lot of web projects on my account, from online stores to personal pop star sites. I can develop a website of any complexity for you."           
+                                .viktoria_profile
+                                    .viprof-text
+                                        p= "Hello. My name is Victoria. I am a very creative person, drawing in different styles. I can draw for you everything from a portrait to a logo. I know how to design packages, labels, web sites. In my portfolio there are also children's drawings and anamorphous illustrations, animation and much more. Professionally I know such programs as Adobe Photoshop, Adobe Illustrator, Corel Draw, Anime Studio (Moho)."
+                                    .viprof-img
+                                        img(src= imgPath + "viktoria.jpg", alt="Victoria K.")
+
+                            .header-line
+                            nav.social-nav
+                                -var i = 0;
+                                -for (name in socialLink) {
+                                    a(href= socialLinlHref[i] target="_blank")
+                                        img(src= imgPath + socialLink[i] + ".png", alt= "RuVi " + socialLink[i])
+                                    -i++
+                                -}
+                            .header-line
+        div(class="cd-cover-layer")
+        div(class="cd-loading-bar")
+        script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
+        script(src=jsPath + "main.js")    

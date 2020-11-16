@@ -8,9 +8,9 @@
 -var navBarColor = "#ffffff";
 -var logoImg = "ruvilogo.svg"; //- Logo Image
 -var logoText = "RuVi Logo" //-Logo Text
--var titles = "RuVi Profile"; //Cambiar Para Head Title
+-var titles = "RuVi Profile Main Page"; //Cambiar Para Head Title
 -var menuItem = ['Home', 'Price', 'Arts', 'Web', 'About']; // Menu name
--var menuItemHref = ['index.html', '#!', '#!', '#!', '#!'] // Menu Link
+-var menuItemHref = ['index.html', '#!', '#!', '#!', 'about.html'] // Menu Link
 -var socialLink = ['Freelancer', 'Pinterest', 'Youtube', 'Twitter', 'GitHub'] // Social name
 -var socialLinlHref = ['https://www.freelancer.com/u/Araah', '#!', '#!', '#!', 'https://github.com/Araah'] // Social link
 -var cont02TextTitle = ['Title exaple 1', 'Title examplem 2'];
@@ -23,92 +23,79 @@ html(lang="en")
     head
         include include/head.pug
     body
-        include include/header-nav.pug
-
-        picture.bg-image
-            -var i = 0;
-            -for (name in sizesBg) {
-            source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
-            source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
-            -i++
-            -}
-            source(srcset= imgPath + "main_bg-1920-min.webp")
-            source(srcset= imgPath + "main_bg-1920-min.jpg")
-            img(src= imgPath + "main_bg-1920-min.jpg")  
-        
-        section.section01
-            .section01-main_content
-                .header-content
-                    h1= "Welcome"
-                    h2= "We are happy to greet you on our site"
-                    p= "This site is dedicated to works in art and programming. On our site you can see examples of our work on Web design, programming, illustration. In the 'Arts' section you will be able to see many illustrations in different styles, such as pixel art, concept art, children's drawings, logos and many others. In the 'Web' section you will find web site layouts, code samples and more. We hope you will find here something that will interest you."
-                .header-line
-                nav.social-nav
-                    -var i = 0;
-                    -for (name in socialLink) {
-                        a(href= socialLinlHref[i] target="_blank")
-                            img(src= imgPath + socialLink[i] + ".png", alt= "RuVi " + socialLink[i])
+        main
+            div(class="cd-index cd-main-content")
+                div
+                    include include/header-nav.pug
+                    picture.bg-image
+                        -var i = 0;
+                        -for (name in sizesBg) {
+                        source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.webp")
+                        source(media="(min-width: " + sizesBg[i] + "px" + ")", srcset= imgPath + "main_bg-" + sizesBg[i] + "-min.jpg")
                         -i++
-                    -}
-                .header-line
-                //- .section01-content
-                    .section01-content_image
-                    .section01-content_image
-                    .section01-content_image
-                //- section.section02
-                //-     h2
-                //-     .section02-content
-                //-         -var i = 0;
-                //-         -for (name in cont02TextTitle) {
-                //-             .section-02-content_image
-                //-                 img(src= imgPath + "cont02-" + (i+1) + ".jpg", alt="")
-                //-             .section-02-content_text
-                //-                 h4= cont02TextTitle[i]
-                //-                 p= cont02Text[i]
-                //-                 -i++
-                //-         -}
-                section.section03
-                    .section03-comment
-                        .section03-comment_title
-                            .comment-body_star
-                                
-                                -for(var i = 1; i <= 5; i++) {
-                                    img(src= imgPath + "star.svg", alt="rate")
+                        -}
+                        source(srcset= imgPath + "main_bg-1920-min.webp")
+                        source(srcset= imgPath + "main_bg-1920-min.jpg")
+                        img(src= imgPath + "main_bg-1920-min.jpg")         
+                    section.section01
+                        .section01-main_content
+                            .header-content
+                                h1= "Welcome"
+                                h2= "We are happy to greet you on our site"
+                                p= "This site is dedicated to works in art and programming. On our site you can see examples of our work on Web design, programming, illustration. In the 'Arts' section you will be able to see many illustrations in different styles, such as pixel art, concept art, children's drawings, logos and many others. In the 'Web' section you will find web site layouts, code samples and more. We hope you will find here something that will interest you."
+                            .header-line
+                            nav.social-nav
+                                -var i = 0;
+                                -for (name in socialLink) {
+                                    a(href= socialLinlHref[i] target="_blank")
+                                        img(src= imgPath + socialLink[i] + ".png", alt= "RuVi " + socialLink[i])
+                                    -i++
                                 -}
-                                
-                            .comment-title_img
-                                a(href="https://www.freelancer.com/u/ascensioninc" target="_blank")
-                                    img(src= imgPath + "jonatan.jpg", alt="Jonathan F.")
-                            .comment-title_name Jonathan F.
-                        .section03-comment_body
-                            .comment-body_text
-                                p= "When talent meets dedication ! Ruslan is strong both on design and on technique, knows what he wants and how to do it. Self driven, energetic. He proposed different designs et let us choose, and was patient enough with us to help us overcome technical and compatibility issues, to adapt our website structure to the needed design constraints. Recommended !"
-                    .section03-comment
-                        .section03-comment_title
-                            .comment-body_star
-                                -for(var i = 1; i <= 5; i++) {
-                                    img(src= imgPath + "star.svg", alt="rate")
-                                -}
-                            .comment-title_img
-                                a(href="https://www.freelancer.com/u/Traceypiano" target="_blank")
-                                    img(src= imgPath + "traice.png", alt="Tracey P.")
-                            .comment-title_name Tracey P.
-                        .section03-comment_body
-                            .comment-body_text
-                                p= "After the first draft in the contest, I mentioned a few things that needed to be changed, but he read my mind as to some details I hadn't mentioned. Great work, consistent, great attitude, professional product, on time. I will hire him again."
-                    .section03-comment
-                        .section03-comment_title
-                            .comment-body_star
-                                -for(var i = 1; i <= 5; i++) {
-                                    img(src= imgPath + "star.svg", alt="rate")
-                                -}
-                            .comment-title_img
-                                a(href="https://www.freelancer.com/u/karen158" target="_blank")
-                                    img(src= imgPath + "karina.svg", alt="Karina M.")
-                            .comment-title_name Karina M.
-                        .section03-comment_body
-                            .comment-body_text
-                                p= "OMG, He is a great professional, talented, provided me project ahead of time and exactly what I was looking for, I am shocked by my experience with him, I worked a lot here with freelancers who did not give and dis not understand a quarter of the project, and he is excellent !!! Anyone who wants a bomb project is just him !! VERY RECOMMENDED!!!"
+                            .header-line
+                            section.section03
+                                .section03-comment
+                                    .section03-comment_title
+                                        .comment-body_star
 
-        include include/footer.pug
-        
+                                            -for(var i = 1; i <= 5; i++) {
+                                                img(src= imgPath + "star.svg", alt="rate")
+                                            -}
+
+                                        .comment-title_img
+                                            a(href="https://www.freelancer.com/u/ascensioninc" target="_blank")
+                                                img(src= imgPath + "jonatan.jpg", alt="Jonathan F.")
+                                        .comment-title_name Jonathan F.
+                                    .section03-comment_body
+                                        .comment-body_text
+                                            p= "When talent meets dedication ! Ruslan is strong both on design and on technique, knows what he wants and how to do it. Self driven, energetic. He proposed different designs et let us choose, and was patient enough with us to help us overcome technical and compatibility issues, to adapt our website structure to the needed design constraints. Recommended !"
+                                .section03-comment
+                                    .section03-comment_title
+                                        .comment-body_star
+                                            -for(var i = 1; i <= 5; i++) {
+                                                img(src= imgPath + "star.svg", alt="rate")
+                                            -}
+                                        .comment-title_img
+                                            a(href="https://www.freelancer.com/u/Traceypiano" target="_blank")
+                                                img(src= imgPath + "traice.png", alt="Tracey P.")
+                                        .comment-title_name Tracey P.
+                                    .section03-comment_body
+                                        .comment-body_text
+                                            p= "After the first draft in the contest, I mentioned a few things that needed to be changed, but he read my mind as to some details I hadn't mentioned. Great work, consistent, great attitude, professional product, on time. I will hire him again."
+                                .section03-comment
+                                    .section03-comment_title
+                                        .comment-body_star
+                                            -for(var i = 1; i <= 5; i++) {
+                                                img(src= imgPath + "star.svg", alt="rate")
+                                            -}
+                                        .comment-title_img
+                                            a(href="https://www.freelancer.com/u/karen158" target="_blank")
+                                                img(src= imgPath + "karina.svg", alt="Karina M.")
+                                        .comment-title_name Karina M.
+                                    .section03-comment_body
+                                        .comment-body_text
+                                            p= "OMG, He is a great professional, talented, provided me project ahead of time and exactly what I was looking for, I am shocked by my experience with him, I worked a lot here with freelancers who did not give and dis not understand a quarter of the project, and he is excellent !!! Anyone who wants a bomb project is just him !! VERY RECOMMENDED!!!"
+                    include include/footer.pug
+        div(class="cd-cover-layer")
+        div(class="cd-loading-bar")
+        script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
+        script(src=jsPath + "main.js")    

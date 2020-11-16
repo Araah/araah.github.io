@@ -6,11 +6,11 @@ header
         .main-nav_item
             -for(name in menuItem) {
                 if (curentPage == menuItem[i])
-                    a(href= menuItemHref[i] id= "curent_page")
+                    a(href= menuItemHref[i], id= "curent_page", data-type="page-transition", class="cd-btn")
                         span= menuItem[i]
                     -i++
                 else
-                    a(href= menuItemHref[i])
+                    a(href= menuItemHref[i], data-type="page-transition", class="cd-btn")
                         span= menuItem[i]
                     -i++
                 
