@@ -1,0 +1,71 @@
+-var sizes = ['16x16', '32x32', '96x96', '120x120', '192x192', '57x57', '60x60', '72x72', '76x76', '114x114', '120x120', '144x144', '152x152', '180x180'];
+-var sizesBg = ['2560', '1920', '1600', '1440', '1280']
+-var cssPath = "./css/";
+-var jsPath = "./js/";
+-var favPath = "./favicon/";
+-var imgPath = "./images/";
+-var incPath = "./include/";
+-var navBarColor = "#ffffff";
+-var logoImg = "ruvilogo.svg"; //- Logo Image
+-var logoText = "RuVi Logo" //-Logo Text
+-var titles = "RuVi Profile Main Page"; //Cambiar Para Head Title
+-var menuItem = ['Home', 'Price', 'Arts', 'Web', 'About']; // Menu name
+-var menuItemHref = ['index.html', '#!', 'arts.html', '#!', 'about.html'] // Menu Link
+-var socialLink = ['Freelancer', 'Pinterest', 'Youtube', 'Twitter', 'GitHub'] // Social name
+-var socialLinlHref = ['https://www.freelancer.com/u/Araah', '#!', '#!', '#!', 'https://github.com/Araah'] // Social link
+-var cont02TextTitle = ['Title exaple 1', 'Title examplem 2'];
+-var cont02Text =['Text example 1', 'Text example 2'];
+-var curentPage = 'Arts';
+
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include include/head.pug
+        link(rel="stylesheet", href= cssPath + "gallery.css")
+    body
+        main
+            div(class="cd-index cd-main-content")
+                div
+                    include include/header-nav.pug
+                    .gallery_wrapper
+                        .lightgallery
+                            h1 Photoshop
+                            .container
+                                #carousel
+                                    div(id="selector1")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/1.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/1.png", alt="1")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/2.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/2.png", alt="2")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/3.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/3.png", alt="3")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/4.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/4.png", alt="4")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/5.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/5.png", alt="5")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/6.jpg" class="item")
+                                                img(src= imgPath + "gallery/photoshop/6.jpg", alt="6")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/7.png" class="item")
+                                                img(src= imgPath + "gallery/photoshop/7.png", alt="7")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/8.jpg" class="item")
+                                                img(src= imgPath + "gallery/photoshop/8.jpg", alt="8")
+                                        figure
+                                            a(href= imgPath + "gallery/photoshop/9.jpg" class="item")
+                                                img(src= imgPath + "gallery/photoshop/9.jpg", alt="9")
+                        
+
+        div(class="cd-cover-layer")
+        div(class="cd-loading-bar")
+        //- script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
+        script(src= jsPath + "main.js")
+        script(src= jsPath + "lightgallery-all.min.js")
+        script(type="text/javascript", src=jsPath + "gallery.js")
