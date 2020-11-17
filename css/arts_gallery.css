@@ -30,8 +30,8 @@ h1 {
 
 .container {
     margin: 10% auto;
-    width: 300px;
-    height: 300px;
+    width: 15vw;
+    height: 15vw;
     position: relative;
     perspective: 2000px;
 }
@@ -51,8 +51,8 @@ h1 {
 #carousel figure {
     display: block;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 18vw;
+    height: 18vw;
     left: 10px;
     top: 10px;
     /* background: black; */
@@ -61,43 +61,43 @@ h1 {
 }
 
 #carousel figure:nth-child(1) {
-    transform: rotateY(0deg) translateZ(600px);
+    transform: rotateY(0deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(2) {
-    transform: rotateY(36deg) translateZ(600px);
+    transform: rotateY(36deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(3) {
-    transform: rotateY(72deg) translateZ(600px);
+    transform: rotateY(72deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(4) {
-    transform: rotateY(108deg) translateZ(600px);
+    transform: rotateY(108deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(5) {
-    transform: rotateY(144deg) translateZ(600px);
+    transform: rotateY(144deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(6) {
-    transform: rotateY(180deg) translateZ(600px);
+    transform: rotateY(180deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(7) {
-    transform: rotateY(216deg) translateZ(600px);
+    transform: rotateY(216deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(8) {
-    transform: rotateY(252deg) translateZ(600px);
+    transform: rotateY(252deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(9) {
-    transform: rotateY(288deg) translateZ(600px);
+    transform: rotateY(288deg) translateZ(30vw);
 }
 
 #carousel figure:nth-child(10) {
-    transform: rotateY(324deg) translateZ(600px);
+    transform: rotateY(324deg) translateZ(30vw);
 }
 
 figure img {
