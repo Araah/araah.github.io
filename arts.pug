@@ -22,14 +22,17 @@
 html(lang="en")
     head
         include include/head.pug
-        
+        script(async type="text/javascript", src=jsPath + "gallery.js")
         
     body
         main
             div(class="cd-index cd-main-content")
                 div
                     include include/header-nav.pug
+                    
                     .gallery_wrapper
+                    
+                        
                         .lightgallery
                             h1 Photoshop work
                             .container
@@ -100,13 +103,10 @@ html(lang="en")
                                         figure
                                             a(href= imgPath + "gallery/vector/10.jpg" class="item")
                                                 img(src= imgPath + "gallery/vector/t10.jpg", alt="Fire biker")
-                                       
-                                      
-                        
-
+                
         div(class="cd-cover-layer")
         div(class="cd-loading-bar")
         //- script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
-        script(src= jsPath + "main.js")
+
         
        

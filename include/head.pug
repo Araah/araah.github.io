@@ -34,12 +34,13 @@ link(
 )
 link(rel="stylesheet", href= cssPath + "main.min.css")
 link(rel="stylesheet", href= cssPath + "gallery.css")
-//- script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
-script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+script(type="text/javascript" src= jsPath + "jquery-2.1.1.js")
+//- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 //- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+script(async src= jsPath + "lightgallery-all.min.js")
+
 script(src=jsPath + "modernizr.js")
-script(src= jsPath + "lightgallery-all.min.js")
-script(type="text/javascript", src=jsPath + "gallery.js")
+script(src= jsPath + "main.js")
 meta(
     name= "theme-color"
     content= navBarColor
