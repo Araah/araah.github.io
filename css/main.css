@@ -494,6 +494,69 @@ img:hover {
     transform: rotateY(360deg);
   }
 }
+@media screen and (max-device-width: 800px) {
+  .lightgallery {
+    height: 30vh;
+    width: 99vw;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  #carousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(2) {
+    transform: rotateY(36deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(3) {
+    transform: rotateY(72deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(4) {
+    transform: rotateY(108deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(5) {
+    transform: rotateY(144deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(6) {
+    transform: rotateY(180deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(7) {
+    transform: rotateY(216deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(8) {
+    transform: rotateY(252deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(9) {
+    transform: rotateY(288deg) translateZ(40vw);
+  }
+
+  #carousel figure:nth-child(10) {
+    transform: rotateY(324deg) translateZ(40vw);
+  }
+
+  #carousel figure {
+    width: 25vw;
+    height: 30vw;
+  }
+
+  .container {
+    width: 30vw;
+  }
+
+  figure img {
+    -webkit-filter: grayscale(0);
+  }
+}
 body {
   position: relative;
   width: 100%;
