@@ -82,6 +82,8 @@ jQuery(document).ready(function(event) {
         if (document.querySelector("div.selector1")) {
             $('.selector1').lightGallery({
                 selector: '.item'
+                    // mode: 'lg-share'
+                    // share: false
             });
             // console.log("Yeah");
             // clearInterval(interStart);
