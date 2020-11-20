@@ -135,25 +135,34 @@ section.section01
                         border-radius: 50%
                         border: 2px #fffffff dotted
                         object-fit: cover
+                        @media screen and ( max-device-width: 800px)
+                            width: 35vw
+                            height: 35vw
                 .ruprof-text
                     p
                         text-align: justify 
                         line-height: 3.5vh
+                        @media screen and ( max-device-width: 800px)
+                            line-height: 2.4vh
             .viktoria_profile
                 @extend .ruslan_profile
                 .viprof-text
                     p
                         text-align: justify
                         line-height: 3.5vh
+                        @media screen and ( max-device-width: 800px)
+                            line-height: 2.4vh
                 .viprof-img
                     @extend .ruprof-img
                     img
-
                         width: 15vw
                         height: 15vw
                         border-radius: 50%
                         border: 2px #fffffff dotted
                         object-fit: cover
+                        @media screen and ( max-device-width: 800px)
+                            width: 35vw
+                            height: 35vw
         .section03
             display: grid
             grid-template-columns: 1fr 1fr 1fr

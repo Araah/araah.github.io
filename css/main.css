@@ -660,13 +660,29 @@ section.section01 .section01-main_content .header-content .ruslan_profile .rupro
   border: 2px #fffffff dotted;
   object-fit: cover;
 }
+@media screen and (max-device-width: 800px) {
+  section.section01 .section01-main_content .header-content .ruslan_profile .ruprof-img img, section.section01 .section01-main_content .header-content .viktoria_profile .ruprof-img img, section.section01 .section01-main_content .header-content .viktoria_profile .viprof-img img {
+    width: 35vw;
+    height: 35vw;
+  }
+}
 section.section01 .section01-main_content .header-content .ruslan_profile .ruprof-text p, section.section01 .section01-main_content .header-content .viktoria_profile .ruprof-text p {
   text-align: justify;
   line-height: 3.5vh;
 }
+@media screen and (max-device-width: 800px) {
+  section.section01 .section01-main_content .header-content .ruslan_profile .ruprof-text p, section.section01 .section01-main_content .header-content .viktoria_profile .ruprof-text p {
+    line-height: 2.4vh;
+  }
+}
 section.section01 .section01-main_content .header-content .viktoria_profile .viprof-text p {
   text-align: justify;
   line-height: 3.5vh;
+}
+@media screen and (max-device-width: 800px) {
+  section.section01 .section01-main_content .header-content .viktoria_profile .viprof-text p {
+    line-height: 2.4vh;
+  }
 }
 section.section01 .section01-main_content .header-content .viktoria_profile .viprof-img img {
   width: 15vw;
@@ -674,6 +690,12 @@ section.section01 .section01-main_content .header-content .viktoria_profile .vip
   border-radius: 50%;
   border: 2px #fffffff dotted;
   object-fit: cover;
+}
+@media screen and (max-device-width: 800px) {
+  section.section01 .section01-main_content .header-content .viktoria_profile .viprof-img img {
+    width: 35vw;
+    height: 35vw;
+  }
 }
 section.section01 .section01-main_content .section03 {
   display: grid;
