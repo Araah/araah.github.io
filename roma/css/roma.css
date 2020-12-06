@@ -1,0 +1,127 @@
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Aksent";
+  src: url("../font/AksentNormal.eot");
+  src: local("Aksent Normal"), local("AksentNormal"), url("../font/AksentNormal.eot?#iefix") format("embedded-opentype"), url("../font/AksentNormal.woff2") format("woff2"), url("../font/AksentNormal.woff") format("woff"), url("../font/AksentNormal.svg#AksentNormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  position: relative;
+  font-family: "Aksent";
+  font-size: 20px;
+}
+body .page_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 99vh;
+  z-index: -1;
+}
+body .page_bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body header {
+  width: 100%;
+}
+body header div {
+  padding-top: 5vh;
+  margin-top: 0;
+  height: 7vh;
+}
+body header div a {
+  background: none;
+}
+body header div a:active {
+  border: none;
+}
+body header div a:active img {
+  width: 12vw;
+}
+body header div a img {
+  width: 13vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 5px 15px rgba(0, 0, 0, 0.9), 0px 5px 8px 13px #d49f3be6;
+}
+body section.main {
+  margin: 5vh 0 0 0;
+  height: 10vh;
+  margin-left: 14vw;
+  margin-right: 17vw;
+  background-image: -moz-linear-gradient(130deg, rgba(151, 100, 26, 0.7) 0%, rgba(251, 231, 197, 0.7) 30%, rgba(108, 71, 22, 0.7) 83%, rgba(174, 149, 114, 0.7) 93%, rgba(239, 226, 205, 0.7) 100%);
+  background-image: -webkit-linear-gradient(130deg, rgba(151, 100, 26, 0.7) 0%, rgba(251, 231, 197, 0.7) 30%, rgba(108, 71, 22, 0.7) 83%, rgba(174, 149, 114, 0.7) 93%, rgba(239, 226, 205, 0.7) 100%);
+  background-image: -ms-linear-gradient(130deg, rgba(151, 100, 26, 0.7) 0%, rgba(251, 231, 197, 0.7) 30%, rgba(108, 71, 22, 0.7) 83%, rgba(174, 149, 114, 0.7) 93%, rgba(239, 226, 205, 0.7) 100%);
+  box-shadow: 5px 0px 35.72px 2.28px rgba(19, 19, 21, 0.004), -0.593px 16.99px 57.66px 4.34px rgba(131, 130, 130, 0.004);
+  height: 79vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body section.main .info {
+  display: grid;
+  grid-row-gap: 7vh;
+  padding-top: 3vh;
+  padding-bottom: 5vh;
+}
+body section.main .info .main-info {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 15.66px 11.34px rgba(255, 255, 255, 0.38);
+  margin-left: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 3em;
+}
+body section.main .info .main-info span {
+  font-size: 2em;
+  color: black;
+  text-shadow: 0px 8px 9px rgba(255, 255, 255, 0.6);
+}
