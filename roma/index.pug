@@ -7,45 +7,56 @@ html(lang="en")
         script(src="./js/main.js")
         title Roman and Company
     body
-        div.preloader
-            div.container
-                p= "Roman&Co"
-                div.gear(id="gear1")
-                div.gear(id="gear2")
-                div.gear(id="gear3")
-                div.gear(id="gear4")
-                div.gear(id="gear5")
-                div.gear(id="gear6")
-                div.gear(id="gear7")
-        .page_bg
-            img(src="./img/index_bg.jpg", alt="Index BG")
-        header
-            div
-                a(href="#!")
-                    img(src="./img/rom_logo.png", alt="Logo Roma and Company")
-        section.main
-            .info
-                .main-info
-                    span= "Добро пожаловать!"
-                .main-info
-                    p.main-info_item= "Мы рады приветствовать вас на сайте компании roman&co"
-                .main-info
-                    p.main-info_item= "здесь вы сможете ознакомиться с примерами наших работ"
-                .main-info
-                    p.main-info_item= "узнать более подробно о услунах , ценах и акциях"
-                .main-info
-                    p.main-info_item= "задать нам любые вопросы и вызвать специалиста на дом"
-                .main-info
-                    p.main-info_item= "мы будем рады получить ваш отзыв и рекомеднации для улучшения качества нашей работы."
-            .nav
+        .main_wrapper
+            div.preloader
+                div.container
+                    p= "Roman&Co"
+                    div.gear(id="gear1")
+                    div.gear(id="gear2")
+                    div.gear(id="gear3")
+                    div.gear(id="gear4")
+                    div.gear(id="gear5")
+                    div.gear(id="gear6")
+                    div.gear(id="gear7")
+            .page_bg
+                img(src="./img/index_bg.jpg", alt="Index BG")
+            header
                 div
                     a(href="#!")
-                div
-                    a(href="#!")
-                div
-                    a(href="#!")
-                div
-                    a(href="#!")
-                div
-                    a(href="#!")
-        footer
+                        img(src="./img/rom_logo.png", alt="Logo Roma and Company")
+            section.main
+                .info
+                    .main-info
+                        span= "Добро пожаловать!"
+                    .main-info
+                        p.main-info_item= "Мы рады приветствовать вас на сайте компании roman&co"
+                    .main-info
+                        p.main-info_item= "здесь вы сможете ознакомиться с примерами наших работ"
+                    .main-info
+                        p.main-info_item= "узнать более подробно о услунах , ценах и акциях"
+                    .main-info
+                        p.main-info_item= "задать нам любые вопросы и вызвать специалиста на дом"
+                    .main-info
+                        p.main-info_item= "мы будем рады получить ваш отзыв и рекомеднации для улучшения качества нашей работы."
+                .nav
+                   div
+                       a(href="#!")
+                           img(src="./img/btn.png", alt="")
+                           p= "О НАС"
+                   div
+                       a(href="#!")
+                           img(src="./img/btn.png", alt="")
+                           p= "галерея"
+                   div
+                       a(href="#!")
+                           img(src="./img/btn.png", alt="")
+                           p= "УСЛУГИ и цены"
+                   div
+                       a(href="#!")
+                           img(src="./img/btn.png", alt="")
+                           p= "контакты"
+                   div
+                       a(href="#!")
+                           img(src="./img/btn.png", alt="")
+                           p= "отзывы"
+            footer
