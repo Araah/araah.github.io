@@ -6,12 +6,20 @@
     font-weight: normal
     font-style: normal
     font-display: swap
+@font-face 
+    font-family: 'Terminator Cyr 4'
+    src: url('TerminatorCyr4-Semi-expandedBold.eot')
+    src: local('Terminator Cyr 4 Semi-expanded Bold'), local('TerminatorCyr4-Semi-expandedBold'), url('../font/TerminatorCyr4-Semi-expandedBold.eot?#iefix') format('embedded-opentype'), url('../font/TerminatorCyr4-Semi-expandedBold.woff2') format('woff2'), url('../font/TerminatorCyr4-Semi-expandedBold.woff') format('woff'), url('../font/TerminatorCyr4-Semi-expandedBold.ttf') format('truetype'), url('../font/TerminatorCyr4-Semi-expandedBold.svg#TerminatorCyr4-Semi-expandedBold') format('svg')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+
 
 
 body
     position: relative
     font-family: 'Aksent'
-    font-size: 20px
+    font-size: 1vw
     .page_bg
         position: absolute
         top: 0
@@ -65,16 +73,22 @@ body
             .main-info
                 border-radius: 10px
                 background-color: rgba(255, 255, 255,0.4)
-                box-shadow: 0px 0px 15.66px 11.34px rgba(255, 255, 255, 0.38)
+                box-shadow: 0px 0px 15.66px 7.34px rgba(255, 255, 255, 0.38)
                 margin-left: 10vw
                 display: flex
                 align-items: center
                 justify-content: center
-                max-height: 3em
+                // max-height: 3em
                 span
                     font-size: 2em
+                    font-weight: 500
                     color: rgb(0, 0, 0)
                     text-shadow: 0px 8px 9px rgba(255, 255, 255, 0.6)
+                p.main-info_item
+                    display: block
+                    text-align: center
+                    font-family: 'Terminator Cyr 4'
+                    font-size: 0.8em
 
 
     footer
