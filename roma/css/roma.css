@@ -502,6 +502,10 @@ body div.preloader {
   background-color: #000000;
   z-index: 1000;
 }
+body div.preloader div.container p {
+  z-index: 1001;
+  color: #ffffff;
+}
 body .page_bg {
   position: absolute;
   top: 0;
@@ -578,4 +582,7 @@ body section.main .info .main-info p.main-info_item {
   text-align: center;
   font-family: "Terminator Cyr 4";
   font-size: 0.8em;
+}
+body section.main .nav {
+  display: grid;
 }
