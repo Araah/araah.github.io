@@ -1,7 +1,7 @@
 .container {
-    height: 390px;
+    height: 500px;
     margin: 30px auto;
-    width: 280px;
+    width: 500px;
     position: relative;
 }
 
@@ -134,7 +134,7 @@
 }
 
 #gear6 {
-    background: url('../images/g2.png') no-repeat 0 0;
+    background: url('../img/g2.png') no-repeat 0 0;
     height: 125px;
     left: 200px;
     top: 283px;
@@ -146,7 +146,7 @@
 }
 
 #gear7 {
-    background: url('../images/g3.png') no-repeat 0 0;
+    background: url('../img/g3.png') no-repeat 0 0;
     height: 103px;
     left: 277px;
     top: 217px;
