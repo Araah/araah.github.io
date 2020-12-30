@@ -1,0 +1,64 @@
+@use 'rest'
+@use 'footer'
+
+body
+    color: #ffffff
+    font-size: 16px
+h2
+
+    text-align: center
+h3
+    font-size: 25px
+    font-weight: 600
+    padding-top: 1vh
+
+
+section.section-1
+    background-color:#062340
+    min-height: 10vh
+    display: none
+
+section.section-2
+    background-color: #041526
+    min-height: 10vh
+    display: none
+
+footer
+    background-color: #041526
+    min-height: 10vh
+
+div.tab
+    margin: 0 15vh
+    display: flex
+    justify-content: center
+    align-content: center
+    
+    button.card
+        width: 20vw
+        height: 30vh
+        margin: 2vh
+        background-color: none
+        background: none
+        border: 0px
+        border-radius: 8px
+        overflow: hidden
+        padding: 0
+        color: #ffffff
+        text-decoration: none
+        .card-title
+            background-color: #ffffff
+            background-image: linear-gradient(90deg, rgb(255, 153, 51), rgb(255, 204, 51))
+            min-height: 5vh
+            width: 100%
+        .card-content
+            background-color: #ffffff
+            height: 100%
+            width: 100%
+
+div.tab_in
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+.active 
+    display: block !important
+
