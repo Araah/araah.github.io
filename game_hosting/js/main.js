@@ -1,24 +1,42 @@
 $(document).ready(function() {
-    console.log('ready');
+
     $("button#host").click(function() {
         $("#region").addClass("active");
+        $("#host2").addClass("non_select");
+        $("#host").removeClass("non_select");
         $("#other").removeClass("active");
+        $("#host").removeClass("non_select");
         $("#otherServises").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        document.getElementById('region').scrollIntoView(true);
 
     });
     $("button#regionButt").click(function() {
         $("#regServises").addClass("active");
+        $("#regionButt1").addClass("non_select");
+        $("#regionButt").removeClass("non_select");
         $("#otherServises").removeClass("active");
         $("#mensual").removeClass("active");
-        document.getElementById('regServises').scrollIntoView(true);
+
+    });
+
+    $("button#regionButt1").click(function() {
+        $("#regServises").addClass("active");
+        $("#regionButt").addClass("non_select");
+        $("#regionButt1").removeClass("non_select");
+        $("#otherServises").removeClass("active");
+        $("#mensual").removeClass("active");
 
     });
     $("button#price1").click(function() {
         $("#pr1").addClass("active");
-        document.getElementById('pr1').scrollIntoView(true);
+        $("#price2").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price1").removeClass("non_select");
         $("#pr2").removeClass("active");
         $("#pr3").removeClass("active");
         $("#pr4").removeClass("active");
@@ -27,11 +45,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price2").click(function() {
         $("#pr2").addClass("active");
-        document.getElementById('pr2').scrollIntoView(true);
+        $("#price1").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price2").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr3").removeClass("active");
         $("#pr4").removeClass("active");
@@ -40,11 +63,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price3").click(function() {
         $("#pr3").addClass("active");
-        document.getElementById('pr3').scrollIntoView(true);
+        $("#price2").addClass("non_select");
+        $("#price1").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price3").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
         $("#pr4").removeClass("active");
@@ -53,12 +81,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price4").click(function() {
         $("#pr4").addClass("active");
-        document.getElementById('pr4').scrollIntoView(true);
-
+        $("#price2").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price1").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price4").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
         $("#pr3").removeClass("active");
@@ -67,12 +99,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price5").click(function() {
         $("#pr5").addClass("active");
-        document.getElementById('pr5').scrollIntoView(true);
-
+        $("#price2").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price1").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price5").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
         $("#pr3").removeClass("active");
@@ -81,12 +117,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price6").click(function() {
         $("#pr6").addClass("active");
-        document.getElementById('pr6').scrollIntoView(true);
-
+        $("#price2").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price1").addClass("non_select");
+        $("#price7").addClass("non_select");
+        $("#price6").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
         $("#pr3").removeClass("active");
@@ -95,12 +135,16 @@ $(document).ready(function() {
         $("#pr7").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button#price7").click(function() {
         $("#pr7").addClass("active");
-        document.getElementById('pr7').scrollIntoView(true);
-
+        $("#price2").addClass("non_select");
+        $("#price3").addClass("non_select");
+        $("#price4").addClass("non_select");
+        $("#price5").addClass("non_select");
+        $("#price6").addClass("non_select");
+        $("#price1").addClass("non_select");
+        $("#price7").removeClass("non_select");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
         $("#pr3").removeClass("active");
@@ -109,7 +153,6 @@ $(document).ready(function() {
         $("#pr6").removeClass("active");
         $("#pr8").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
 
 
@@ -117,8 +160,8 @@ $(document).ready(function() {
 
     $("button#host2").click(function() {
         $("#other").addClass("active");
-        document.getElementById('other').scrollIntoView(true);
-
+        $("#host").addClass("non_select");
+        $("#host2").removeClass("non_select");
         $("#region").removeClass("active");
         $("#regServises").removeClass("active");
         $("#pr1").removeClass("active");
@@ -129,13 +172,11 @@ $(document).ready(function() {
         $("#pr6").removeClass("active");
         $("#pr7").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("host2");
     });
 
     $("button#otherButt").click(function() {
         $("#otherServises").addClass("active");
-        document.getElementById('otherServises').scrollIntoView(true);
-
+        $("#otherButt").removeClass("non_select");
         $("#regServises").removeClass("active");
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
@@ -145,12 +186,10 @@ $(document).ready(function() {
         $("#pr6").removeClass("active");
         $("#pr7").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
 
     $("button#price8").click(function() {
         $("#pr8").addClass("active");
-        document.getElementById('pr8').scrollIntoView(true);
 
         $("#pr1").removeClass("active");
         $("#pr2").removeClass("active");
@@ -160,12 +199,24 @@ $(document).ready(function() {
         $("#pr6").removeClass("active");
         $("#pr7").removeClass("active");
         $("#mensual").removeClass("active");
-        console.log("servises");
     });
     $("button.prices").click(function() {
         $("#mensual").addClass("active");
-        document.getElementById('mensual').scrollIntoView(true);
 
-        console.log("servises");
+    });
+    $("button#men1").click(function() {
+        $("#men6").addClass("non_select");
+        $("#men12").addClass("non_select");
+        $("#men1").removeClass("non_select");
+    });
+    $("button#men6").click(function() {
+        $("#men1").addClass("non_select");
+        $("#men12").addClass("non_select");
+        $("#men6").removeClass("non_select");
+    });
+    $("button#men12").click(function() {
+        $("#men6").addClass("non_select");
+        $("#men1").addClass("non_select");
+        $("#men12").removeClass("non_select");
     });
 });

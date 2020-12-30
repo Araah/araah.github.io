@@ -2765,19 +2765,16 @@ h3 {
 
 section.section-1 {
   background-color: #062340;
-  min-height: 10vh;
   display: none;
 }
 
 section.section-2 {
   background-color: #041526;
-  min-height: 10vh;
   display: none;
 }
 
 footer {
   background-color: #041526;
-  min-height: 10vh;
 }
 
 div.tab {
@@ -2787,8 +2784,8 @@ div.tab {
   align-content: center;
 }
 div.tab button.card {
-  width: 20vw;
-  height: 30vh;
+  width: 15vw;
+  height: 25vh;
   margin: 2vh;
   background-color: none;
   background: none;
@@ -2798,6 +2795,10 @@ div.tab button.card {
   padding: 0;
   color: #ffffff;
   text-decoration: none;
+  transition: 0.3s all linear;
+}
+div.tab button.card:hover {
+  transform: scale(1.2);
 }
 div.tab button.card .card-title {
   background-color: #ffffff;
@@ -2819,4 +2820,8 @@ div.tab_in {
 
 .active {
   display: block !important;
+}
+
+.non_select {
+  opacity: 0.3 !important;
 }
