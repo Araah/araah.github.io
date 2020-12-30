@@ -219,4 +219,60 @@ $(document).ready(function() {
         $("#men1").addClass("non_select");
         $("#men12").removeClass("non_select");
     });
+    $("button#prs").click(function() {
+        $("#prs1").addClass("non_select");
+        $("#prs").removeClass("non_select");
+    });
+    $("button#prs1").click(function() {
+        $("#prs").addClass("non_select");
+        $("#prs1").removeClass("non_select");
+    });
+    $("button#prs2").click(function() {
+        $("#prs3").addClass("non_select");
+        $("#prs2").removeClass("non_select");
+    });
+    $("button#prs3").click(function() {
+        $("#prs2").addClass("non_select");
+        $("#prs3").removeClass("non_select");
+    });
+    $("button#prs4").click(function() {
+        $("#prs5").addClass("non_select");
+        $("#prs4").removeClass("non_select");
+    });
+    $("button#prs5").click(function() {
+        $("#prs4").addClass("non_select");
+        $("#prs5").removeClass("non_select");
+    });
+    $("button#prs6").click(function() {
+        $("#prs7").addClass("non_select");
+        $("#prs6").removeClass("non_select");
+    });
+    $("button#prs7").click(function() {
+        $("#prs6").addClass("non_select");
+        $("#prs7").removeClass("non_select");
+    });
+    $("button#prs8").click(function() {
+        $("#prs9").addClass("non_select");
+        $("#prs10").addClass("non_select");
+        $("#prs8").removeClass("non_select");
+    });
+    $("button#prs9").click(function() {
+        $("#prs8").addClass("non_select");
+        $("#prs10").addClass("non_select");
+        $("#prs9").removeClass("non_select");
+    });
+    $("button#prs10").click(function() {
+        $("#prs8").addClass("non_select");
+        $("#prs9").addClass("non_select");
+        $("#prs10").removeClass("non_select");
+    });
+    $("button#prs11").click(function() {
+        $("#prs12").addClass("non_select");
+        $("#prs11").removeClass("non_select");
+    });
+    $("button#prs12").click(function() {
+        $("#prs11").addClass("non_select");
+        $("#prs12").removeClass("non_select");
+    });
+
 });
